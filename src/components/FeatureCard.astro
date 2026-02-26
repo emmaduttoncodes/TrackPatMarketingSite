@@ -1,0 +1,29 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  icon: string;
+  color: string;
+  href: string;
+}
+
+const { title, description, icon, color, href } = Astro.props;
+---
+
+<a
+  href={href}
+  class="block bg-white rounded-tp-lg p-6 shadow-tp border border-tp-border/50 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200"
+>
+  <div class="flex items-start gap-4">
+    <div
+      class="w-11 h-11 rounded-tp-sm flex items-center justify-center text-xl shrink-0"
+      style={`background: ${color}18; color: ${color};`}
+    >
+      <span aria-hidden="true">{icon}</span>
+    </div>
+    <div>
+      <h3 class="font-serif font-semibold text-lg text-tp-text mb-1">{title}</h3>
+      <p class="text-tp-muted text-sm leading-relaxed">{description}</p>
+    </div>
+  </div>
+</a>

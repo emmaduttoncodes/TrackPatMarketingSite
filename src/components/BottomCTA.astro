@@ -1,0 +1,37 @@
+---
+import { APP_URL } from '../config';
+
+interface Props {
+  heading?: string;
+  subtitle?: string;
+}
+
+const {
+  heading = 'Start tracking your recovery',
+  subtitle = 'Free, private, and ready to use right now — no account needed.',
+} = Astro.props;
+---
+
+<section class="py-16 md:py-24">
+  <div class="max-w-site mx-auto px-6">
+    <div class="text-center rounded-tp-lg p-10 md:p-16 bg-tp-gradient">
+      <h2 class="font-serif text-3xl md:text-4xl font-bold text-white mb-4">
+        {heading}
+      </h2>
+      <p class="text-white/85 text-lg mb-8 max-w-md mx-auto">
+        {subtitle}
+      </p>
+      <a
+        href={APP_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-2 px-8 py-4 bg-white text-tp-green font-semibold rounded-tp-sm hover:bg-white/95 transition-colors shadow-tp text-lg"
+      >
+        Open TrackPat
+        <svg class="w-5 h-5" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>

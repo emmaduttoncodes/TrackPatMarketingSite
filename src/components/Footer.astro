@@ -1,0 +1,81 @@
+---
+import { APP_URL, GITHUB_URL, BASE } from '../config';
+
+const year = new Date().getFullYear();
+
+const links = [
+  { label: 'Features', href: `${BASE}features/` },
+  { label: 'For Carers', href: `${BASE}for-carers/` },
+  { label: 'For Clinicians', href: `${BASE}for-clinicians/` },
+  { label: 'FAQ', href: `${BASE}faq/` },
+  { label: 'Privacy', href: `${BASE}privacy/` },
+];
+---
+
+<footer class="bg-white border-t border-tp-border mt-auto no-print">
+  <div class="max-w-site mx-auto px-6 py-12">
+    <div class="flex flex-col md:flex-row justify-between items-start gap-8">
+      <!-- Branding -->
+      <div class="flex flex-col gap-4">
+        <a href={BASE} class="flex items-center gap-2.5 text-tp-text" aria-label="TrackPat home">
+          <img src={`${BASE}icon.svg`} alt="" width="28" height="28" class="rounded-lg" />
+          <span class="font-serif font-bold text-lg">TrackPat</span>
+        </a>
+        <p class="text-tp-muted text-sm max-w-xs">
+          A calm, private companion for tracking your recovery after transplant.
+        </p>
+      </div>
+
+      <!-- Nav links -->
+      <nav aria-label="Footer navigation" class="flex flex-wrap gap-x-8 gap-y-2">
+        {links.map((link) => (
+          <a href={link.href} class="text-sm text-tp-muted hover:text-tp-green transition-colors">
+            {link.label}
+          </a>
+        ))}
+      </nav>
+
+      <!-- External links -->
+      <div class="flex flex-col gap-3">
+        <a
+          href={APP_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-sm text-tp-muted hover:text-tp-green transition-colors"
+        >
+          Open TrackPat &rarr;
+        </a>
+        <a
+          href={GITHUB_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 text-sm text-tp-muted hover:text-tp-green transition-colors"
+        >
+          <svg class="w-4 h-4" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+          </svg>
+          View on GitHub
+        </a>
+        <a
+          href={`${GITHUB_URL}/issues`}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-sm text-tp-muted hover:text-tp-green transition-colors"
+        >
+          Questions or feedback?
+        </a>
+        <span class="inline-flex items-center gap-1.5 text-xs text-tp-muted bg-tp-green-light px-3 py-1 rounded-full w-fit">
+          <svg class="w-3 h-3 text-tp-green" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          Open Source
+        </span>
+      </div>
+    </div>
+
+    <div class="mt-8 pt-6 border-t border-tp-border text-center text-xs text-tp-muted">
+      <p>&copy; {year} TrackPat. Built with care for the transplant community.</p>
+      <p class="mt-2">TrackPat is not a medical device and does not provide medical advice.</p>
+    </div>
+  </div>
+</footer>

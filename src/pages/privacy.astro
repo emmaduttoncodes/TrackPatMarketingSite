@@ -1,0 +1,92 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import PageHeader from '../components/PageHeader.astro';
+---
+
+<BaseLayout
+  title="Privacy — TrackPat"
+  description="TrackPat's privacy statement. No data collection, no servers, no analytics. Your health data stays on your device."
+>
+  <Navbar />
+  <main>
+    <PageHeader
+      title="Privacy"
+      subtitle="Your health data is yours. Full stop."
+    />
+
+    <!-- Privacy content -->
+    <section class="py-16 md:py-24">
+      <div class="max-w-3xl mx-auto px-6">
+        <div class="bg-white rounded-tp-lg p-8 md:p-10 shadow-tp border border-tp-border/50">
+          <div class="prose-like space-y-8">
+            <div>
+              <h2 class="font-serif text-xl font-bold text-tp-text mb-3">No data collection</h2>
+              <p class="text-tp-muted leading-relaxed">
+                TrackPat does not collect, store, or transmit any personal or health data.
+                There are no servers, no databases, no analytics services, and no third-party
+                data processors. We have no way to access your information because it never
+                leaves your device.
+              </p>
+            </div>
+
+            <div class="border-t border-tp-border pt-8">
+              <h2 class="font-serif text-xl font-bold text-tp-text mb-3">Local storage</h2>
+              <p class="text-tp-muted leading-relaxed">
+                All data you enter into TrackPat is stored locally on your device using
+                IndexedDB, a standard browser storage technology. This means your data is
+                saved in your web browser and is not accessible to anyone else — including us.
+              </p>
+            </div>
+
+            <div class="border-t border-tp-border pt-8">
+              <h2 class="font-serif text-xl font-bold text-tp-text mb-3">External requests</h2>
+              <p class="text-tp-muted leading-relaxed">
+                The only external network request TrackPat makes is to Google Fonts, which
+                loads the DM Sans and Source Serif 4 typefaces used in the interface. Google's
+                font service may log standard web request information (such as your IP address)
+                as described in
+                <a href="https://developers.google.com/fonts/faq/privacy" class="text-tp-green hover:underline">
+                  Google's privacy policy</a>.
+              </p>
+            </div>
+
+            <div class="border-t border-tp-border pt-8">
+              <h2 class="font-serif text-xl font-bold text-tp-text mb-3">No cookies or tracking</h2>
+              <p class="text-tp-muted leading-relaxed">
+                TrackPat does not use cookies, tracking pixels, fingerprinting, or any other
+                form of user tracking. There are no analytics scripts, no advertising networks,
+                and no social media integrations that could monitor your activity.
+              </p>
+            </div>
+
+            <div class="border-t border-tp-border pt-8">
+              <h2 class="font-serif text-xl font-bold text-tp-text mb-3">Data export</h2>
+              <p class="text-tp-muted leading-relaxed">
+                When you use the backup or clinician report features, files are generated
+                entirely within your browser and saved directly to your device. No data is
+                uploaded to any server during this process.
+              </p>
+            </div>
+
+            <div class="border-t border-tp-border pt-8">
+              <h2 class="font-serif text-xl font-bold text-tp-text mb-3">Open source</h2>
+              <p class="text-tp-muted leading-relaxed">
+                TrackPat is fully open source. You can inspect the complete source code on
+                <a href="https://github.com/emmaduttoncodes/TrackPat" class="text-tp-green hover:underline">
+                  GitHub</a>
+                to verify these privacy claims for yourself.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <p class="text-center text-sm text-tp-muted mt-8">
+          Last updated: February 2026
+        </p>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>

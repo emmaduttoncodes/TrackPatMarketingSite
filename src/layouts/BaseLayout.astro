@@ -1,0 +1,83 @@
+---
+import { APP_URL, BASE } from '../config';
+
+interface Props {
+  title: string;
+  description?: string;
+  ogImage?: string;
+  headContent?: string;
+}
+
+const {
+  title,
+  description = 'A calm, private companion for tracking your recovery after transplant. Works offline, no account needed, free forever.',
+  ogImage = `${BASE}icon-512.png`,
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const ogImageURL = new URL(ogImage, Astro.site).href;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalURL} />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href={`${BASE}icon.svg`} />
+    <link rel="apple-touch-icon" href={`${BASE}icon-192.png`} />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImageURL} />
+    <meta property="og:image:width" content="512" />
+    <meta property="og:image:height" content="512" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="TrackPat" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageURL} />
+
+    <!-- Theme color -->
+    <meta name="theme-color" content="#8fae8b" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Source+Serif+4:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- JSON-LD -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "TrackPat",
+      "applicationCategory": "HealthApplication",
+      "operatingSystem": "Any (Web Browser)",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "GBP"
+      },
+      "description": description,
+      "url": APP_URL,
+    })} />
+
+    <!-- Additional head content (e.g. page-specific JSON-LD) -->
+    <slot name="head" />
+  </head>
+  <body class="bg-tp-bg text-tp-text min-h-screen flex flex-col">
+    <slot />
+  </body>
+</html>

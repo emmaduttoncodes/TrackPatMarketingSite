@@ -1,0 +1,58 @@
+---
+import PhoneMockup from './PhoneMockup.astro';
+import { APP_URL, BASE } from '../config';
+---
+
+<section class="relative overflow-hidden">
+  <!-- Gradient background -->
+  <div class="absolute inset-0 bg-tp-gradient"></div>
+
+  <div class="relative max-w-site mx-auto px-6 py-16 md:py-24">
+    <div class="flex flex-col md:flex-row items-center gap-12 md:gap-16">
+      <!-- Text -->
+      <div class="flex-1 text-center md:text-left">
+        <h1 class="font-serif text-4xl md:text-5xl lg:text-[3.5rem] font-bold text-white leading-tight mb-6">
+          A calm companion for recovery after transplant
+        </h1>
+        <p class="text-white/85 text-lg md:text-xl leading-relaxed mb-8 max-w-lg mx-auto md:mx-0">
+          Track vitals, medications, symptoms, and more — all privately on your device.
+          No account needed. Works offline. Free forever.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+          <a
+            href={APP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-white text-tp-green font-semibold rounded-tp-sm hover:bg-white/95 transition-colors shadow-tp"
+          >
+            Open TrackPat
+            <svg class="w-4 h-4" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </a>
+          <a
+            href={`${BASE}features/`}
+            class="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-white/15 text-white font-semibold rounded-tp-sm hover:bg-white/25 transition-colors border border-white/30"
+          >
+            See features
+            <svg class="w-4 h-4" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Phone mockup -->
+      <div class="flex-1 flex justify-center">
+        <PhoneMockup label="Overview dashboard screenshot (390x844)" />
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom wave -->
+  <div class="absolute bottom-0 left-0 right-0">
+    <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" class="w-full h-[40px] md:h-[60px]" aria-hidden="true">
+      <path d="M0 60V20C360 60 720 0 1080 20C1260 30 1380 50 1440 60H0Z" fill="#f7f6f2" />
+    </svg>
+  </div>
+</section>

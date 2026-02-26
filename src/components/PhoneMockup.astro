@@ -1,0 +1,33 @@
+---
+interface Props {
+  label: string;
+  screenshotSrc?: string;
+  screenshotAlt?: string;
+}
+
+const { label, screenshotSrc, screenshotAlt = '' } = Astro.props;
+---
+
+<!-- Phone mockup: replace placeholder with screenshot at 390x844px -->
+<div class="relative mx-auto w-[240px] md:w-[280px]">
+  <!-- Phone frame -->
+  <div class="relative rounded-[36px] border-[3px] border-tp-text/20 bg-white shadow-tp overflow-hidden">
+    <!-- Notch -->
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[100px] h-[24px] bg-tp-text/20 rounded-b-2xl z-10"></div>
+    <!-- Screen -->
+    <div class="aspect-[9/19.5] w-full">
+      {screenshotSrc ? (
+        <img
+          src={screenshotSrc}
+          alt={screenshotAlt}
+          class="w-full h-full object-cover"
+          loading="lazy"
+        />
+      ) : (
+        <div class="w-full h-full bg-tp-green-light border-2 border-dashed border-tp-green/30 flex items-center justify-center p-4">
+          <span class="text-tp-green text-sm text-center font-medium leading-snug">{label}</span>
+        </div>
+      )}
+    </div>
+  </div>
+</div>

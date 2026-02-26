@@ -1,0 +1,57 @@
+---
+import SectionHeading from './SectionHeading.astro';
+import { APP_URL } from '../config';
+
+const steps = [
+  {
+    number: '1',
+    title: 'Open',
+    description: 'Visit TrackPat in your browser — no download or sign-up required.',
+  },
+  {
+    number: '2',
+    title: 'Install',
+    description: 'Add it to your home screen for quick access as a standalone app.',
+  },
+  {
+    number: '3',
+    title: 'Track',
+    description: 'Start logging your daily recovery — everything stays on your device.',
+  },
+];
+---
+
+<section class="py-16 md:py-24 bg-white">
+  <div class="max-w-site mx-auto px-6">
+    <SectionHeading
+      title="Up and running in seconds"
+      subtitle="No app store, no account, no waiting."
+    />
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto">
+      {steps.map((step) => (
+        <div class="text-center">
+          <div class="w-12 h-12 rounded-full bg-tp-green-light text-tp-green font-bold text-lg flex items-center justify-center mx-auto mb-4">
+            {step.number}
+          </div>
+          <h3 class="font-serif font-bold text-xl text-tp-text mb-2">{step.title}</h3>
+          <p class="text-tp-muted text-sm leading-relaxed">{step.description}</p>
+        </div>
+      ))}
+    </div>
+
+    <div class="text-center mt-10">
+      <a
+        href={APP_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-2 text-tp-green font-semibold hover:underline"
+      >
+        Try TrackPat now
+        <svg class="w-4 h-4" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>

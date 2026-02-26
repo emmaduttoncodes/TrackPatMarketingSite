@@ -1,0 +1,138 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import BrowserMockup from '../components/BrowserMockup.astro';
+import BottomCTA from '../components/BottomCTA.astro';
+import PageHeader from '../components/PageHeader.astro';
+---
+
+<BaseLayout
+  title="For Clinicians — TrackPat"
+  description="TrackPat generates detailed, exportable recovery reports for clinicians. All patient data stays on-device — no cloud, no registration, no third-party access."
+>
+  <Navbar />
+  <main>
+    <PageHeader
+      title="For Clinicians"
+      subtitle="Better data for better conversations at every appointment."
+    />
+
+    <!-- Main content -->
+    <section class="py-16 md:py-24">
+      <div class="max-w-site mx-auto px-6">
+        <div class="flex flex-col md:flex-row items-center gap-12 md:gap-16">
+          <div class="flex-1">
+            <div class="w-16 h-1 rounded-full bg-tp-coral mb-6"></div>
+            <h2 class="font-serif text-2xl md:text-3xl font-bold text-tp-text mb-6">
+              Structured recovery data, ready to discuss
+            </h2>
+            <div class="space-y-4 text-tp-muted text-lg leading-relaxed">
+              <p>
+                TrackPat encourages patients to log daily vitals, symptoms, medications, and
+                wellbeing indicators. Before an appointment, they can generate a comprehensive
+                report covering any date range.
+              </p>
+              <p>
+                Reports are exported as self-contained HTML files that can be opened in any
+                browser, printed, or emailed — no special software required.
+              </p>
+            </div>
+          </div>
+          <div class="flex-1 flex justify-center">
+            <BrowserMockup label="Exported clinician report (1200x800)" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- What reports include -->
+    <section class="py-16 md:py-24 bg-white">
+      <div class="max-w-site mx-auto px-6">
+        <h2 class="font-serif text-2xl md:text-3xl font-bold text-tp-text mb-10 text-center">
+          What reports include
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+          <div class="text-center">
+            <div class="w-14 h-14 rounded-full bg-tp-green-light text-tp-green flex items-center justify-center mx-auto mb-4">
+              <svg class="w-6 h-6" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+              </svg>
+            </div>
+            <h3 class="font-serif font-semibold text-lg text-tp-text mb-2">Summary Statistics</h3>
+            <p class="text-tp-muted text-sm leading-relaxed">
+              Averages, ranges, and counts for vitals and symptoms across the selected period.
+            </p>
+          </div>
+          <div class="text-center">
+            <div class="w-14 h-14 rounded-full bg-tp-green-light text-tp-green flex items-center justify-center mx-auto mb-4">
+              <svg class="w-6 h-6" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z" />
+              </svg>
+            </div>
+            <h3 class="font-serif font-semibold text-lg text-tp-text mb-2">SVG Trend Charts</h3>
+            <p class="text-tp-muted text-sm leading-relaxed">
+              Visual trends for vitals and tracked metrics, embedded directly in the report.
+            </p>
+          </div>
+          <div class="text-center">
+            <div class="w-14 h-14 rounded-full bg-tp-green-light text-tp-green flex items-center justify-center mx-auto mb-4">
+              <svg class="w-6 h-6" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M3 14h18m-9-4v8m-7 0h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <h3 class="font-serif font-semibold text-lg text-tp-text mb-2">Daily Log Tables</h3>
+            <p class="text-tp-muted text-sm leading-relaxed">
+              Day-by-day breakdown of all logged data in a clear, scannable table format.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Privacy and trust -->
+    <section class="py-16 md:py-24">
+      <div class="max-w-site mx-auto px-6">
+        <div class="max-w-3xl mx-auto">
+          <h2 class="font-serif text-2xl md:text-3xl font-bold text-tp-text mb-6 text-center">
+            Privacy by design
+          </h2>
+          <div class="bg-white rounded-tp-lg p-8 shadow-tp border border-tp-border/50">
+            <div class="space-y-4 text-tp-muted leading-relaxed">
+              <div class="flex items-start gap-3">
+                <svg class="w-5 h-5 mt-0.5 shrink-0 text-tp-green" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                </svg>
+                <p><strong class="text-tp-text">All data stays on the patient's device.</strong> Nothing is transmitted to any server.</p>
+              </div>
+              <div class="flex items-start gap-3">
+                <svg class="w-5 h-5 mt-0.5 shrink-0 text-tp-green" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                </svg>
+                <p><strong class="text-tp-text">No registration or account required.</strong> Patients can start using TrackPat immediately.</p>
+              </div>
+              <div class="flex items-start gap-3">
+                <svg class="w-5 h-5 mt-0.5 shrink-0 text-tp-green" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                </svg>
+                <p><strong class="text-tp-text">No third-party access.</strong> No analytics, no tracking, no data sharing of any kind.</p>
+              </div>
+              <div class="flex items-start gap-3">
+                <svg class="w-5 h-5 mt-0.5 shrink-0 text-tp-green" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                </svg>
+                <p><strong class="text-tp-text">Free and open source.</strong> The full source code is publicly available on GitHub.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <BottomCTA
+      heading="Recommend TrackPat to your patients"
+      subtitle="Free, private, and requires no setup from your team."
+    />
+  </main>
+  <Footer />
+</BaseLayout>

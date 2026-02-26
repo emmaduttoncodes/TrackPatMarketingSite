@@ -1,0 +1,39 @@
+---
+interface Props {
+  id: string;
+  title: string;
+  description: string;
+  highlights: string[];
+  accentColor: string;
+  reverse?: boolean;
+}
+
+const { id, title, description, highlights, accentColor, reverse = false } = Astro.props;
+---
+
+<section id={id} class="py-16 md:py-20">
+  <div class="max-w-site mx-auto px-6">
+    <div class={`flex flex-col ${reverse ? 'md:flex-row-reverse' : 'md:flex-row'} items-center gap-12 md:gap-16`}>
+      <!-- Text content -->
+      <div class="flex-1">
+        <div class="w-16 h-1 rounded-full mb-6" style={`background: ${accentColor};`}></div>
+        <h2 class="font-serif text-2xl md:text-3xl font-bold text-tp-text mb-4">{title}</h2>
+        <p class="text-tp-muted text-lg leading-relaxed mb-6">{description}</p>
+        <ul class="space-y-3">
+          {highlights.map((item) => (
+            <li class="flex items-start gap-3 text-tp-text">
+              <svg class="w-5 h-5 mt-0.5 shrink-0" style={`color: ${accentColor};`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+      <!-- Mockup slot -->
+      <div class="flex-1 flex justify-center">
+        <slot />
+      </div>
+    </div>
+  </div>
+</section>

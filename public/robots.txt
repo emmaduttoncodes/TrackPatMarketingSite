@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://emmaduttoncodes.github.io/TrackPatMarketingSite/sitemap-index.xml

@@ -1,0 +1,141 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import FeatureSection from '../components/FeatureSection.astro';
+import PhoneMockup from '../components/PhoneMockup.astro';
+import BrowserMockup from '../components/BrowserMockup.astro';
+import BottomCTA from '../components/BottomCTA.astro';
+import PageHeader from '../components/PageHeader.astro';
+---
+
+<BaseLayout
+  title="Features — TrackPat"
+  description="Explore TrackPat's features: daily logging, medication tracking, trends, clinician reports, food safety, and clinic preparation."
+>
+  <Navbar />
+  <main>
+    <PageHeader
+      title="Features"
+      subtitle="Simple, focused tools designed around the real needs of transplant recipients and their care teams."
+    />
+
+    <!-- Daily Logging -->
+    <FeatureSection
+      id="daily-logging"
+      title="Daily Logging"
+      description="Record the things that matter most each day with simple, tap-friendly tiles. TrackPat makes it easy to build a habit of tracking without feeling overwhelmed."
+      highlights={[
+        'Vitals: temperature, blood pressure, heart rate, weight',
+        'Pain levels and location tracking',
+        'Activity, sleep quality, mood, and appetite',
+        'Bowel tracking and symptom logging',
+        'Quick daily overview at a glance',
+      ]}
+      accentColor="#8fae8b"
+    >
+      <PhoneMockup label="Dashboard with filled daily log tiles (390×844)" />
+    </FeatureSection>
+
+    <div class="border-t border-tp-border"></div>
+
+    <!-- Medications -->
+    <FeatureSection
+      id="medications"
+      title="Medication Tracking"
+      description="Stay on top of your medication schedule with a clear, organised view. Medications are grouped by time of day and include support for as-needed (PRN) doses."
+      highlights={[
+        'Organised by morning, afternoon, evening, and night',
+        'PRN (as-needed) medication support',
+        'Pre-seeded with common transplant medications',
+        'Tap to mark doses as taken',
+        'Simple add and edit interface',
+      ]}
+      accentColor="#8b9cc7"
+      reverse
+    >
+      <PhoneMockup label="Medication tab view (390×844)" />
+    </FeatureSection>
+
+    <div class="border-t border-tp-border"></div>
+
+    <!-- Trends -->
+    <FeatureSection
+      id="trends"
+      title="Trends &amp; Charts"
+      description="See how your recovery is progressing over time. Interactive charts let you visualise patterns and spot changes that might be worth discussing with your team."
+      highlights={[
+        'Interactive trend charts with touch scrubbing',
+        'View trends over 7, 14, 30, or 90 days',
+        'Track vitals, symptoms, and medication adherence',
+        'Visual patterns make changes easy to spot',
+      ]}
+      accentColor="#7ab8a8"
+    >
+      <PhoneMockup label="Trends page with charts (390×844)" />
+    </FeatureSection>
+
+    <div class="border-t border-tp-border"></div>
+
+    <!-- Clinician Reports -->
+    <FeatureSection
+      id="clinician-reports"
+      title="Clinician Reports"
+      description="Generate comprehensive, beautifully formatted reports to share with your medical team. Reports are exported as self-contained HTML that can be viewed, printed, or emailed."
+      highlights={[
+        'Summary statistics for any date range',
+        'SVG trend charts embedded in the report',
+        'Detailed daily log tables',
+        'Self-contained HTML — no special software needed',
+        'Print-friendly layout',
+      ]}
+      accentColor="#c97070"
+      reverse
+    >
+      <BrowserMockup label="Clinician report in browser view (1200×800)" />
+    </FeatureSection>
+
+    <div class="border-t border-tp-border"></div>
+
+    <!-- Food Safety -->
+    <FeatureSection
+      id="food-safety"
+      title="Food Safety Guide"
+      description="Navigating dietary restrictions after transplant can be confusing. TrackPat includes a searchable food safety guide with a special Waiter Mode for dining out."
+      highlights={[
+        'Searchable list of foods with safety ratings',
+        'Clear categories: safe, caution, avoid',
+        'Waiter Mode: a simplified view to show restaurant staff',
+        'Covers common post-transplant dietary restrictions',
+      ]}
+      accentColor="#d4a574"
+    >
+      <div class="flex gap-4 justify-center">
+        <PhoneMockup label="Food list view (390×844)" />
+        <PhoneMockup label="Waiter Mode view (390×844)" />
+      </div>
+    </FeatureSection>
+
+    <div class="border-t border-tp-border"></div>
+
+    <!-- Clinic Appointments -->
+    <FeatureSection
+      id="clinic-appointments"
+      title="Clinic Appointments"
+      description="Prepare for appointments, note down questions in advance, and take notes during your visit — all in one place."
+      highlights={[
+        'Schedule upcoming appointments',
+        'Prepare questions before your visit',
+        'Take notes during the appointment',
+        'Keep a history of past visits',
+      ]}
+      accentColor="#b8a0c9"
+      reverse
+    >
+      <PhoneMockup label="Appointment detail view (390×844)" />
+    </FeatureSection>
+
+    <BottomCTA />
+  </main>
+  <Footer />
+</BaseLayout>
