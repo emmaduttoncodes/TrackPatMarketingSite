@@ -7,6 +7,7 @@ import PhoneMockup from '../components/PhoneMockup.astro';
 import BrowserMockup from '../components/BrowserMockup.astro';
 import BottomCTA from '../components/BottomCTA.astro';
 import PageHeader from '../components/PageHeader.astro';
+import { BASE } from '../config';
 ---
 
 <BaseLayout
@@ -34,7 +35,7 @@ import PageHeader from '../components/PageHeader.astro';
       ]}
       accentColor="#8fae8b"
     >
-      <PhoneMockup label="Dashboard with filled daily log tiles (390×844)" />
+      <PhoneMockup label="Dashboard with filled daily log tiles (390×844)" screenshotSrc={`${BASE}screenshots/dashboard.png`} screenshotAlt="Renew app dashboard showing filled daily log tiles for vitals, mood, sleep, pain, and activity" />
     </FeatureSection>
 
     <div class="border-t border-tp-border"></div>
@@ -53,7 +54,7 @@ import PageHeader from '../components/PageHeader.astro';
       accentColor="#8b9cc7"
       reverse
     >
-      <PhoneMockup label="Medication tab view (390×844)" />
+      <PhoneMockup label="Medication tab view (390×844)" screenshotSrc={`${BASE}screenshots/medication.png`} screenshotAlt="Renew medication tab showing scheduled medications grouped by time of day" />
     </FeatureSection>
 
     <div class="border-t border-tp-border"></div>
@@ -71,7 +72,7 @@ import PageHeader from '../components/PageHeader.astro';
       ]}
       accentColor="#7ab8a8"
     >
-      <PhoneMockup label="Trends page with charts (390×844)" />
+      <PhoneMockup label="Trends page with charts (390×844)" screenshotSrc={`${BASE}screenshots/trends.png`} screenshotAlt="Renew trends page showing pain, activity, weight, and mood charts over time" />
     </FeatureSection>
 
     <div class="border-t border-tp-border"></div>
@@ -91,7 +92,7 @@ import PageHeader from '../components/PageHeader.astro';
       accentColor="#c97070"
       reverse
     >
-      <BrowserMockup label="Clinician report in browser view (1200×800)" />
+      <BrowserMockup label="Clinician report in browser view (1200×800)" screenshotSrc={`${BASE}screenshots/clinician-report.png`} screenshotAlt="Clinician recovery report showing summary statistics, mood distribution, and trend charts" />
     </FeatureSection>
 
     <div class="border-t border-tp-border"></div>
@@ -109,7 +110,7 @@ import PageHeader from '../components/PageHeader.astro';
       ]}
       accentColor="#d4a574"
     >
-      <PhoneMockup label="Food list view (390×844)" />
+      <PhoneMockup label="Food list view (390×844)" screenshotSrc={`${BASE}screenshots/food-safety.png`} screenshotAlt="Renew food safety guide showing lifetime restrictions and first 6 months food list" />
     </FeatureSection>
 
     <div class="border-t border-tp-border"></div>
@@ -128,7 +129,7 @@ import PageHeader from '../components/PageHeader.astro';
       accentColor="#b8a0c9"
       reverse
     >
-      <PhoneMockup label="Appointment detail view (390×844)" />
+      <PhoneMockup label="Appointment detail view (390×844)" screenshotSrc={`${BASE}screenshots/appointment.png`} screenshotAlt="Renew clinic appointment detail with date, time, and prepared questions" />
     </FeatureSection>
 
     <BottomCTA />
