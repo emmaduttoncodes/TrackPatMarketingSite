@@ -6,7 +6,7 @@ export default defineConfig({
   site: 'https://emmaduttoncodes.github.io',
   base: '/TrackPatMarketingSite',
   integrations: [
-    tailwind(),
+    tailwind({ configFile: './tailwind.config.mjs', applyBaseStyles: false }),
     sitemap(),
   ],
 });

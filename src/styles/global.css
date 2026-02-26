@@ -54,8 +54,6 @@
   }
 }
 
-@layer utilities {
-  .bg-tp-gradient {
-    background: linear-gradient(135deg, #8fae8b 0%, #a3c4a0 40%, #90c5b0 100%);
-  }
+.bg-tp-gradient {
+  background: linear-gradient(135deg, #8fae8b 0%, #a3c4a0 40%, #90c5b0 100%);
 }
