@@ -36,7 +36,7 @@ const faqs = [
   },
   {
     question: 'Is it really free?',
-    answer: 'Renew is free to use, with no ads. It\'s a passion project built with care for the transplant community.',
+    answer: 'Renew is free to use, with no ads. It\'s a passion project built with care for the transplant community. If you\'d like to support the project, you can <a href="https://buymeacoffee.com/emmadutt" target="_blank" rel="noopener noreferrer" class="text-tp-green hover:underline">buy me a coffee</a>.',
   },
   {
     question: 'Can my carer or clinician see my data automatically?',
@@ -98,7 +98,7 @@ const faqJsonLd = JSON.stringify({
                 </svg>
               </summary>
               <div class="px-6 pb-5 text-tp-muted leading-relaxed">
-                {faq.answer}
+                <span set:html={faq.answer} />
               </div>
             </details>
           ))}
