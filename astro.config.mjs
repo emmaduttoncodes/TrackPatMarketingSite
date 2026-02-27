@@ -3,8 +3,7 @@ import tailwind from '@astrojs/tailwind';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  site: 'https://emmaduttoncodes.github.io',
-  base: '/TrackPatMarketingSite',
+  site: 'https://transplantlog.com',
   integrations: [
     tailwind({ configFile: './tailwind.config.mjs', applyBaseStyles: false }),
     sitemap(),
