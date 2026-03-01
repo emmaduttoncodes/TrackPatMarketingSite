@@ -8,51 +8,51 @@ import PageHeader from '../components/PageHeader.astro';
 const faqs = [
   {
     question: 'Is it really free?',
-    answer: 'Renew is free to use, with no ads. It\'s a passion project built with care for the transplant community. If you\'d like to support the project, you can <a href="https://buymeacoffee.com/emmadutt" target="_blank" rel="noopener noreferrer" class="text-tp-green hover:underline">buy me a coffee</a>.',
+    answer: 'Transplant Log is free to use, with no ads. It\'s a passion project built with care for the transplant community. If you\'d like to support the project, you can <a href="https://buymeacoffee.com/emmadutt" target="_blank" rel="noopener noreferrer" class="text-tp-green hover:underline">buy me a coffee</a>.',
   },
   {
     question: 'Do I need to create an account?',
-    answer: 'No. Just open Renew and start using it straight away. There\'s no sign-up, no passwords, and no personal details needed.',
+    answer: 'No. Just open Transplant Log and start using it straight away. There\'s no sign-up, no passwords, and no personal details needed.',
   },
   {
     question: 'Is my information kept private?',
-    answer: 'Yes. Everything you enter into Renew stays on your device. Nothing is sent anywhere else. Your health information never leaves your phone or computer unless you choose to download a report and share it yourself.',
+    answer: 'Yes. Everything you enter into Transplant Log stays on your device. Nothing is sent anywhere else. Your health information never leaves your phone or computer unless you choose to download a report and share it yourself.',
   },
   {
     question: 'Can my carer or clinician see my data automatically?',
     answer: 'No. Your information is only visible to you, on your device. No one else can see it unless you choose to share it. You can download a report and send it by email, or bring it along to a clinic appointment.',
   },
   {
-    question: 'How do I add Renew to my home screen?',
-    answer: 'When you open Renew in your phone\'s browser, you should see an option to "Add to Home Screen" — on iPhone this is in the share menu, and on Android it usually appears as a banner or in the browser menu. Once added, Renew will appear as an icon on your home screen just like any other app, making it quick and easy to open every day.',
+    question: 'How do I add Transplant Log to my home screen?',
+    answer: 'When you open Transplant Log in your phone\'s browser, you should see an option to "Add to Home Screen" — on iPhone this is in the share menu, and on Android it usually appears as a banner or in the browser menu. Once added, Transplant Log will appear as an icon on your home screen just like any other app, making it quick and easy to open every day.',
   },
   {
     question: 'Does it work without internet?',
-    answer: 'Yes. Once you\'ve opened Renew for the first time, it works without an internet connection. You only need to be online for that very first visit.',
+    answer: 'Yes. Once you\'ve opened Transplant Log for the first time, it works without an internet connection. You only need to be online for that very first visit.',
   },
   {
     question: 'Can I use it on my computer?',
-    answer: 'Yes. Renew works on phones, tablets, and computers. It\'s designed with phones in mind but works well on bigger screens too.',
+    answer: 'Yes. Transplant Log works on phones, tablets, and computers. It\'s designed with phones in mind but works well on bigger screens too.',
   },
   {
     question: 'What happens if I get a new phone?',
-    answer: 'Renew has a backup feature that lets you save a copy of all your information. You can then load that backup onto your new device to pick up where you left off. We recommend saving a backup from time to time — because your data is stored on your device, we have no way to recover it if it\'s lost.',
+    answer: 'Transplant Log has a backup feature that lets you save a copy of all your information. You can then load that backup onto your new device to pick up where you left off. We recommend saving a backup from time to time — because your data is stored on your device, we have no way to recover it if it\'s lost.',
   },
   {
     question: 'Is this a medical app?',
-    answer: 'Renew is a personal tool to help you keep track of your recovery. It is not a medical device and does not replace the advice of your transplant team. Always follow the guidance of your doctors and nurses.',
+    answer: 'Transplant Log is a personal tool to help you keep track of your recovery. It is not a medical device and does not replace the advice of your transplant team. Always follow the guidance of your doctors and nurses.',
   },
   {
     question: 'Is this only for liver transplants?',
-    answer: 'Renew was originally designed with liver transplant recovery in mind, but the features — tracking vitals, medications, symptoms, food safety, and clinic visits — are useful for any type of organ transplant recovery.',
+    answer: 'Transplant Log was originally designed with liver transplant recovery in mind, but the features — tracking vitals, medications, symptoms, food safety, and clinic visits — are useful for any type of organ transplant recovery.',
   },
   {
     question: 'Who built this?',
-    answer: 'Renew was built by a partner to support their loved one after a liver transplant. It grew from a personal need into a tool that could help other transplant recipients, carers, and care teams.',
+    answer: 'Transplant Log was built by a partner to support their loved one after a liver transplant. It grew from a personal need into a tool that could help other transplant recipients, carers, and care teams.',
   },
   {
     question: 'I have a suggestion or spotted a problem — how can I get in touch?',
-    answer: 'We\'d love to hear from you! Whether it\'s a feature idea, something that could work better, or a bug you\'ve noticed, your feedback helps us improve Renew for everyone. We\'re a small team and we take every message seriously — so please don\'t hesitate to <a href="mailto:emma@emmadutton.dev" class="text-tp-green hover:underline">get in touch</a>.',
+    answer: 'We\'d love to hear from you! Whether it\'s a feature idea, something that could work better, or a bug you\'ve noticed, your feedback helps us improve Transplant Log for everyone. We\'re a small team and we take every message seriously — so please don\'t hesitate to <a href="mailto:emma@emmadutton.dev" class="text-tp-green hover:underline">get in touch</a>.',
   },
 ];
 
@@ -71,8 +71,8 @@ const faqJsonLd = JSON.stringify({
 ---
 
 <BaseLayout
-  title="FAQ — Renew"
-  description="Frequently asked questions about Renew — privacy, data storage, compatibility, and more."
+  title="FAQ — Transplant Log"
+  description="Frequently asked questions about Transplant Log — privacy, data storage, compatibility, and more."
 >
   <script slot="head" type="application/ld+json" set:html={faqJsonLd} />
 
@@ -80,7 +80,7 @@ const faqJsonLd = JSON.stringify({
   <main>
     <PageHeader
       title="Frequently Asked Questions"
-      subtitle="Everything you need to know about Renew."
+      subtitle="Everything you need to know about Transplant Log."
     />
 
     <!-- FAQ list -->
