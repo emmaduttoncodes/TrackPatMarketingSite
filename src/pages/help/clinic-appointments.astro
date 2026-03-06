@@ -1,0 +1,177 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import BottomCTA from '../../components/BottomCTA.astro';
+import PageHeader from '../../components/PageHeader.astro';
+import PhoneMockup from '../../components/PhoneMockup.astro';
+import { BASE } from '../../config';
+---
+
+<BaseLayout
+  title="Clinic Appointments — Help Centre — Transplant Log"
+  description="How to schedule clinic appointments, prepare questions, and take notes during visits in Transplant Log."
+>
+  <Navbar />
+  <main>
+    <PageHeader
+      title="Clinic Appointments"
+      subtitle="Stay prepared for clinic visits and keep track of what was discussed."
+    />
+
+    <article class="py-16 md:py-24">
+      <div class="max-w-3xl mx-auto px-6">
+
+        <!-- Breadcrumb -->
+        <nav class="mb-12 text-sm text-tp-muted" aria-label="Breadcrumb">
+          <a href={`${BASE}help/`} class="text-tp-green hover:underline">Help Centre</a>
+          <span class="mx-2">/</span>
+          <span>Clinic Appointments</span>
+        </nav>
+
+        <!-- Overview -->
+        <section class="mb-12">
+          <h2 class="font-serif text-2xl md:text-3xl font-semibold text-tp-text mb-4">Keeping track of your appointments</h2>
+          <div class="flex flex-col md:flex-row gap-8 items-start">
+            <div class="flex-1">
+              <p class="text-tp-muted leading-relaxed mb-4">
+                After a transplant, you'll have regular clinic visits. Transplant Log helps you keep track of them, prepare questions in advance, and write down anything important during the appointment.
+              </p>
+              <p class="text-tp-muted leading-relaxed">
+                To find your appointments, go to the <strong class="text-tp-text">Profile</strong> tab and tap <strong class="text-tp-text">Clinic Appointments</strong>.
+              </p>
+            </div>
+            <div class="flex-shrink-0 mx-auto md:mx-0">
+              <PhoneMockup label="Clinic appointment view" screenshotSrc={`${BASE}screenshots/appointment.png`} screenshotAlt="A clinic appointment with date, time, and prepared questions" />
+            </div>
+          </div>
+        </section>
+
+        <div class="border-t border-tp-border mb-12"></div>
+
+        <!-- Adding an appointment -->
+        <section class="mb-12">
+          <h2 class="font-serif text-2xl md:text-3xl font-semibold text-tp-text mb-4">Adding an appointment</h2>
+          <ol class="space-y-3 text-tp-muted leading-relaxed">
+            <li class="flex gap-3">
+              <span class="flex-shrink-0 w-7 h-7 rounded-full bg-tp-green-light text-tp-green font-semibold text-sm flex items-center justify-center">1</span>
+              <span>Go to <strong class="text-tp-text">Clinic Appointments</strong> from your Profile</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="flex-shrink-0 w-7 h-7 rounded-full bg-tp-green-light text-tp-green font-semibold text-sm flex items-center justify-center">2</span>
+              <span>Tap the button to add a new appointment</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="flex-shrink-0 w-7 h-7 rounded-full bg-tp-green-light text-tp-green font-semibold text-sm flex items-center justify-center">3</span>
+              <span>Enter the <strong class="text-tp-text">date and time</strong> of your visit</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="flex-shrink-0 w-7 h-7 rounded-full bg-tp-green-light text-tp-green font-semibold text-sm flex items-center justify-center">4</span>
+              <span>Everything saves automatically as you type</span>
+            </li>
+          </ol>
+        </section>
+
+        <div class="border-t border-tp-border mb-12"></div>
+
+        <!-- Preparing questions -->
+        <section class="mb-12">
+          <h2 class="font-serif text-2xl md:text-3xl font-semibold text-tp-text mb-4">Preparing questions</h2>
+          <p class="text-tp-muted leading-relaxed mb-4">
+            It's easy to forget what you wanted to ask once you're in the appointment. Transplant Log lets you note down your questions beforehand so you don't miss anything.
+          </p>
+          <p class="text-tp-muted leading-relaxed mb-4">
+            When you open an appointment, you'll see a space to add questions. You can:
+          </p>
+          <ul class="space-y-2 text-tp-muted leading-relaxed">
+            <li class="flex gap-2">
+              <svg class="w-4 h-4 text-tp-green flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              <span>Add questions as you think of them — in the days or weeks before your visit</span>
+            </li>
+            <li class="flex gap-2">
+              <svg class="w-4 h-4 text-tp-green flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              <span>Your questions are numbered automatically</span>
+            </li>
+            <li class="flex gap-2">
+              <svg class="w-4 h-4 text-tp-green flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              <span>Open the list on your phone during the appointment so you can work through them</span>
+            </li>
+          </ul>
+
+          <div class="bg-tp-card-alt rounded-tp-md p-5 mt-6">
+            <p class="text-tp-muted text-sm leading-relaxed">
+              <strong class="text-tp-text">Example questions you might want to ask:</strong>
+            </p>
+            <ul class="text-tp-muted text-sm mt-2 space-y-1 list-disc list-inside">
+              <li>When can I start driving again?</li>
+              <li>Is it normal to feel tired all the time?</li>
+              <li>Should I be worried about this pain?</li>
+              <li>When will my medications be reduced?</li>
+            </ul>
+          </div>
+        </section>
+
+        <div class="border-t border-tp-border mb-12"></div>
+
+        <!-- Taking notes -->
+        <section class="mb-12">
+          <h2 class="font-serif text-2xl md:text-3xl font-semibold text-tp-text mb-4">Taking notes during your visit</h2>
+          <p class="text-tp-muted leading-relaxed mb-4">
+            Each appointment has a notes section where you can write down anything important your team tells you. This is especially helpful when you're feeling tired or foggy — you can look back at your notes later instead of trying to remember everything.
+          </p>
+          <p class="text-tp-muted leading-relaxed text-sm">
+            Notes save automatically as you type, so you don't need to worry about losing them.
+          </p>
+        </section>
+
+        <div class="border-t border-tp-border mb-12"></div>
+
+        <!-- Visit reports -->
+        <section class="mb-12">
+          <h2 class="font-serif text-2xl md:text-3xl font-semibold text-tp-text mb-4">Exporting a visit report</h2>
+          <p class="text-tp-muted leading-relaxed mb-4">
+            Each appointment has an option to export a report that covers just the time since your last visit. This is different from the general Trends report — it's focused specifically on what's happened between appointments.
+          </p>
+          <p class="text-tp-muted leading-relaxed">
+            You can print this report or show it on your phone during the appointment. It gives your team a quick summary of how things have been going.
+          </p>
+        </section>
+
+        <!-- Past appointments -->
+        <section>
+          <div class="bg-tp-green-light rounded-tp-md p-6">
+            <h3 class="font-serif text-lg font-semibold text-tp-text mb-2">Keeping a record</h3>
+            <p class="text-tp-muted leading-relaxed text-sm">
+              Past appointments are kept in the app, so you can always look back at your notes and questions from previous visits. This can be useful if you need to check what was discussed.
+            </p>
+          </div>
+        </section>
+
+      </div>
+    </article>
+
+    <!-- Read next -->
+    <section class="pb-16 md:pb-24">
+      <div class="max-w-3xl mx-auto px-6">
+        <h2 class="font-serif text-xl font-semibold text-tp-text mb-6">Read next</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <a href={`${BASE}help/trends-and-reports/`} class="group bg-white rounded-tp-md border border-tp-border/50 shadow-tp p-5 hover:shadow-md hover:-translate-y-0.5 transition-all">
+            <h3 class="font-medium text-tp-text group-hover:text-tp-green transition-colors text-sm">Trends & Reports</h3>
+            <p class="text-tp-muted text-xs mt-1">See your recovery trends and share reports</p>
+          </a>
+          <a href={`${BASE}help/medications/`} class="group bg-white rounded-tp-md border border-tp-border/50 shadow-tp p-5 hover:shadow-md hover:-translate-y-0.5 transition-all">
+            <h3 class="font-medium text-tp-text group-hover:text-tp-green transition-colors text-sm">Medications</h3>
+            <p class="text-tp-muted text-xs mt-1">Track your scheduled and as-needed medicines</p>
+          </a>
+          <a href={`${BASE}help/food-safety/`} class="group bg-white rounded-tp-md border border-tp-border/50 shadow-tp p-5 hover:shadow-md hover:-translate-y-0.5 transition-all">
+            <h3 class="font-medium text-tp-text group-hover:text-tp-green transition-colors text-sm">Food Safety</h3>
+            <p class="text-tp-muted text-xs mt-1">Check which foods to avoid after transplant</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <BottomCTA />
+  </main>
+  <Footer />
+</BaseLayout>

@@ -1,0 +1,245 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import BottomCTA from '../../components/BottomCTA.astro';
+import PageHeader from '../../components/PageHeader.astro';
+import PhoneMockup from '../../components/PhoneMockup.astro';
+import { BASE } from '../../config';
+---
+
+<BaseLayout
+  title="Getting Started — Help Centre — Transplant Log"
+  description="How to open Transplant Log, add it to your home screen, and set things up for the first time. Simple step-by-step guide."
+>
+  <Navbar />
+  <main>
+    <PageHeader
+      title="Getting Started"
+      subtitle="Everything you need to get up and running. It only takes a minute."
+    />
+
+    <article class="py-16 md:py-24">
+      <div class="max-w-3xl mx-auto px-6">
+
+        <!-- Breadcrumb -->
+        <nav class="mb-12 text-sm text-tp-muted" aria-label="Breadcrumb">
+          <a href={`${BASE}help/`} class="text-tp-green hover:underline">Help Centre</a>
+          <span class="mx-2">/</span>
+          <span>Getting Started</span>
+        </nav>
+
+        <!-- What is Transplant Log -->
+        <section class="mb-12">
+          <h2 class="font-serif text-2xl md:text-3xl font-semibold text-tp-text mb-4">What is Transplant Log?</h2>
+          <p class="text-tp-muted leading-relaxed mb-4">
+            Transplant Log is a simple app that helps you keep track of your recovery after a transplant. You can log things like how you're feeling, what medications you've taken, and any symptoms you want to mention at your next clinic visit.
+          </p>
+          <p class="text-tp-muted leading-relaxed">
+            It's completely free, works without internet, and everything you enter stays on your device. Nobody else can see your information unless you choose to share it.
+          </p>
+        </section>
+
+        <div class="border-t border-tp-border mb-12"></div>
+
+        <!-- How to open -->
+        <section class="mb-12">
+          <h2 class="font-serif text-2xl md:text-3xl font-semibold text-tp-text mb-4">How to open Transplant Log</h2>
+          <p class="text-tp-muted leading-relaxed mb-4">
+            Transplant Log works in your phone's web browser. There's nothing to download from an app store.
+          </p>
+          <ol class="space-y-3 text-tp-muted leading-relaxed">
+            <li class="flex gap-3">
+              <span class="flex-shrink-0 w-7 h-7 rounded-full bg-tp-green-light text-tp-green font-semibold text-sm flex items-center justify-center">1</span>
+              <span>Open your web browser (Safari on iPhone, Chrome on Android)</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="flex-shrink-0 w-7 h-7 rounded-full bg-tp-green-light text-tp-green font-semibold text-sm flex items-center justify-center">2</span>
+              <span>Go to <strong class="text-tp-text">app.transplantlog.com</strong></span>
+            </li>
+            <li class="flex gap-3">
+              <span class="flex-shrink-0 w-7 h-7 rounded-full bg-tp-green-light text-tp-green font-semibold text-sm flex items-center justify-center">3</span>
+              <span>That's it — you're in. No account or sign-up needed.</span>
+            </li>
+          </ol>
+        </section>
+
+        <div class="border-t border-tp-border mb-12"></div>
+
+        <!-- Add to home screen -->
+        <section class="mb-12">
+          <h2 class="font-serif text-2xl md:text-3xl font-semibold text-tp-text mb-4">Adding to your home screen</h2>
+          <p class="text-tp-muted leading-relaxed mb-6">
+            You can add Transplant Log to your phone's home screen so it's easy to find — just like any other app. This also means it will work even when you don't have internet.
+          </p>
+
+          <div class="space-y-8">
+            <!-- iPhone -->
+            <div class="bg-white rounded-tp-md border border-tp-border/50 shadow-tp p-6">
+              <h3 class="font-serif text-lg font-semibold text-tp-text mb-3">On iPhone (Safari)</h3>
+              <ol class="space-y-2 text-tp-muted leading-relaxed text-sm">
+                <li class="flex gap-3">
+                  <span class="flex-shrink-0 w-6 h-6 rounded-full bg-tp-green-light text-tp-green font-semibold text-xs flex items-center justify-center">1</span>
+                  <span>Open <strong class="text-tp-text">app.transplantlog.com</strong> in Safari</span>
+                </li>
+                <li class="flex gap-3">
+                  <span class="flex-shrink-0 w-6 h-6 rounded-full bg-tp-green-light text-tp-green font-semibold text-xs flex items-center justify-center">2</span>
+                  <span>Tap the <strong class="text-tp-text">Share</strong> button (the square with an arrow pointing up) at the bottom of the screen</span>
+                </li>
+                <li class="flex gap-3">
+                  <span class="flex-shrink-0 w-6 h-6 rounded-full bg-tp-green-light text-tp-green font-semibold text-xs flex items-center justify-center">3</span>
+                  <span>Scroll down and tap <strong class="text-tp-text">Add to Home Screen</strong></span>
+                </li>
+                <li class="flex gap-3">
+                  <span class="flex-shrink-0 w-6 h-6 rounded-full bg-tp-green-light text-tp-green font-semibold text-xs flex items-center justify-center">4</span>
+                  <span>Tap <strong class="text-tp-text">Add</strong> in the top right</span>
+                </li>
+              </ol>
+            </div>
+
+            <!-- Android -->
+            <div class="bg-white rounded-tp-md border border-tp-border/50 shadow-tp p-6">
+              <h3 class="font-serif text-lg font-semibold text-tp-text mb-3">On Android (Chrome)</h3>
+              <ol class="space-y-2 text-tp-muted leading-relaxed text-sm">
+                <li class="flex gap-3">
+                  <span class="flex-shrink-0 w-6 h-6 rounded-full bg-tp-green-light text-tp-green font-semibold text-xs flex items-center justify-center">1</span>
+                  <span>Open <strong class="text-tp-text">app.transplantlog.com</strong> in Chrome</span>
+                </li>
+                <li class="flex gap-3">
+                  <span class="flex-shrink-0 w-6 h-6 rounded-full bg-tp-green-light text-tp-green font-semibold text-xs flex items-center justify-center">2</span>
+                  <span>You may see a banner saying <strong class="text-tp-text">Add to Home Screen</strong> — if so, just tap it</span>
+                </li>
+                <li class="flex gap-3">
+                  <span class="flex-shrink-0 w-6 h-6 rounded-full bg-tp-green-light text-tp-green font-semibold text-xs flex items-center justify-center">3</span>
+                  <span>If you don't see the banner, tap the <strong class="text-tp-text">three dots</strong> in the top right corner of Chrome</span>
+                </li>
+                <li class="flex gap-3">
+                  <span class="flex-shrink-0 w-6 h-6 rounded-full bg-tp-green-light text-tp-green font-semibold text-xs flex items-center justify-center">4</span>
+                  <span>Tap <strong class="text-tp-text">Add to Home Screen</strong> or <strong class="text-tp-text">Install App</strong></span>
+                </li>
+              </ol>
+            </div>
+          </div>
+        </section>
+
+        <div class="border-t border-tp-border mb-12"></div>
+
+        <!-- First time setup -->
+        <section class="mb-12">
+          <h2 class="font-serif text-2xl md:text-3xl font-semibold text-tp-text mb-4">Setting up for the first time</h2>
+          <p class="text-tp-muted leading-relaxed mb-4">
+            When you first open Transplant Log, you'll see a short welcome screen. You can:
+          </p>
+          <ul class="space-y-3 text-tp-muted leading-relaxed">
+            <li class="flex gap-3">
+              <svg class="w-5 h-5 text-tp-green flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              <span><strong class="text-tp-text">Enter your name</strong> — this is optional, and just used to personalise greetings. You can skip it or change it later.</span>
+            </li>
+            <li class="flex gap-3">
+              <svg class="w-5 h-5 text-tp-green flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+              <span><strong class="text-tp-text">Enter your transplant date</strong> — this helps the app show your "days since transplant" milestone and tells the food safety guide whether to show temporary restrictions. You can add or change this later in Settings.</span>
+            </li>
+          </ul>
+          <p class="text-tp-muted leading-relaxed mt-4">
+            After that, you'll see the main screen with your daily log. Don't worry about filling everything in straight away — just explore at your own pace.
+          </p>
+        </section>
+
+        <div class="border-t border-tp-border mb-12"></div>
+
+        <!-- What you'll see -->
+        <section class="mb-12">
+          <h2 class="font-serif text-2xl md:text-3xl font-semibold text-tp-text mb-4">What you'll see</h2>
+          <p class="text-tp-muted leading-relaxed mb-6">
+            The main screen shows tiles for each thing you can log — like vitals, mood, pain, and sleep. At the bottom, there are three tabs:
+          </p>
+
+          <div class="flex flex-col md:flex-row gap-8 items-start">
+            <div class="flex-1">
+              <ul class="space-y-4 text-tp-muted leading-relaxed">
+                <li class="flex gap-3">
+                  <span class="flex-shrink-0 w-8 h-8 rounded-tp-sm bg-tp-green-light text-tp-green flex items-center justify-center">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" /><rect x="14" y="3" width="7" height="7" /><rect x="14" y="14" width="7" height="7" /><rect x="3" y="14" width="7" height="7" /></svg>
+                  </span>
+                  <span><strong class="text-tp-text">Overview</strong> — your daily log. This is where you'll spend most of your time. You can also switch to Medication view from here.</span>
+                </li>
+                <li class="flex gap-3">
+                  <span class="flex-shrink-0 w-8 h-8 rounded-tp-sm bg-tp-green-light text-tp-green flex items-center justify-center">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10" /><line x1="12" y1="20" x2="12" y2="4" /><line x1="6" y1="20" x2="6" y2="14" /></svg>
+                  </span>
+                  <span><strong class="text-tp-text">Trends</strong> — charts showing how things are changing over time. You can also create reports here to share with your medical team.</span>
+                </li>
+                <li class="flex gap-3">
+                  <span class="flex-shrink-0 w-8 h-8 rounded-tp-sm bg-tp-green-light text-tp-green flex items-center justify-center">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" /><circle cx="12" cy="7" r="4" /></svg>
+                  </span>
+                  <span><strong class="text-tp-text">Profile</strong> — your name, transplant milestone, and links to food safety, clinic appointments, and settings.</span>
+                </li>
+              </ul>
+            </div>
+            <div class="flex-shrink-0 mx-auto md:mx-0">
+              <PhoneMockup label="Dashboard overview" screenshotSrc={`${BASE}screenshots/dashboard.png`} screenshotAlt="The Transplant Log dashboard showing daily logging tiles" />
+            </div>
+          </div>
+        </section>
+
+        <!-- Nudges -->
+        <section class="mb-12">
+          <div class="bg-tp-green-light rounded-tp-md p-6">
+            <h3 class="font-serif text-lg font-semibold text-tp-text mb-2">Helpful hints</h3>
+            <p class="text-tp-muted leading-relaxed text-sm">
+              When you first start using the app, you'll see a few small purple cards with tips to help you find your way around. You can dismiss each one by tapping "Got it" — they won't come back once you've seen them.
+            </p>
+          </div>
+        </section>
+
+        <!-- Next steps -->
+        <section>
+          <h2 class="font-serif text-2xl md:text-3xl font-semibold text-tp-text mb-4">What to do next</h2>
+          <p class="text-tp-muted leading-relaxed mb-4">
+            There's no right or wrong way to use Transplant Log. Here are some things you might want to try:
+          </p>
+          <ul class="space-y-2 text-tp-muted leading-relaxed">
+            <li class="flex gap-2">
+              <span class="text-tp-green">&#8250;</span>
+              <a href={`${BASE}help/daily-logging/`} class="text-tp-green hover:underline">Log how you're feeling today</a>
+            </li>
+            <li class="flex gap-2">
+              <span class="text-tp-green">&#8250;</span>
+              <a href={`${BASE}help/medications/`} class="text-tp-green hover:underline">Check your medications are set up</a>
+            </li>
+            <li class="flex gap-2">
+              <span class="text-tp-green">&#8250;</span>
+              <a href={`${BASE}help/food-safety/`} class="text-tp-green hover:underline">Have a look at the food safety guide</a>
+            </li>
+          </ul>
+        </section>
+
+      </div>
+    </article>
+
+    <!-- Read next -->
+    <section class="pb-16 md:pb-24">
+      <div class="max-w-3xl mx-auto px-6">
+        <h2 class="font-serif text-xl font-semibold text-tp-text mb-6">Read next</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <a href={`${BASE}help/daily-logging/`} class="group bg-white rounded-tp-md border border-tp-border/50 shadow-tp p-5 hover:shadow-md hover:-translate-y-0.5 transition-all">
+            <h3 class="font-medium text-tp-text group-hover:text-tp-green transition-colors text-sm">Daily Logging</h3>
+            <p class="text-tp-muted text-xs mt-1">How to record your vitals, pain, mood, and more</p>
+          </a>
+          <a href={`${BASE}help/medications/`} class="group bg-white rounded-tp-md border border-tp-border/50 shadow-tp p-5 hover:shadow-md hover:-translate-y-0.5 transition-all">
+            <h3 class="font-medium text-tp-text group-hover:text-tp-green transition-colors text-sm">Medications</h3>
+            <p class="text-tp-muted text-xs mt-1">Track your scheduled and as-needed medicines</p>
+          </a>
+          <a href={`${BASE}help/food-safety/`} class="group bg-white rounded-tp-md border border-tp-border/50 shadow-tp p-5 hover:shadow-md hover:-translate-y-0.5 transition-all">
+            <h3 class="font-medium text-tp-text group-hover:text-tp-green transition-colors text-sm">Food Safety</h3>
+            <p class="text-tp-muted text-xs mt-1">Check which foods to avoid after transplant</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <BottomCTA />
+  </main>
+  <Footer />
+</BaseLayout>

@@ -1,0 +1,195 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import BottomCTA from '../../components/BottomCTA.astro';
+import PageHeader from '../../components/PageHeader.astro';
+import PhoneMockup from '../../components/PhoneMockup.astro';
+import { BASE } from '../../config';
+---
+
+<BaseLayout
+  title="Food Safety — Help Centre — Transplant Log"
+  description="How to use the food safety guide and Waiter Mode in Transplant Log. Know which foods to avoid after your transplant."
+>
+  <Navbar />
+  <main>
+    <PageHeader
+      title="Food Safety"
+      subtitle="Know what's safe to eat — at home and when eating out."
+    />
+
+    <article class="py-16 md:py-24">
+      <div class="max-w-3xl mx-auto px-6">
+
+        <!-- Breadcrumb -->
+        <nav class="mb-12 text-sm text-tp-muted" aria-label="Breadcrumb">
+          <a href={`${BASE}help/`} class="text-tp-green hover:underline">Help Centre</a>
+          <span class="mx-2">/</span>
+          <span>Food Safety</span>
+        </nav>
+
+        <!-- Overview -->
+        <section class="mb-12">
+          <h2 class="font-serif text-2xl md:text-3xl font-semibold text-tp-text mb-4">What the food safety guide does</h2>
+          <div class="flex flex-col md:flex-row gap-8 items-start">
+            <div class="flex-1">
+              <p class="text-tp-muted leading-relaxed mb-4">
+                After a transplant, there are some foods and drinks you'll need to avoid. It can be hard to remember them all, especially in the early days.
+              </p>
+              <p class="text-tp-muted leading-relaxed mb-4">
+                Transplant Log includes a food safety guide that lists the things you should avoid. It's always there in the app for quick reference, whether you're at home, shopping, or eating out.
+              </p>
+              <p class="text-tp-muted leading-relaxed">
+                To find it, go to the <strong class="text-tp-text">Profile</strong> tab and tap <strong class="text-tp-text">Food Safety</strong>.
+              </p>
+            </div>
+            <div class="flex-shrink-0 mx-auto md:mx-0">
+              <PhoneMockup label="Food safety guide" screenshotSrc={`${BASE}screenshots/food-safety.png`} screenshotAlt="The food safety guide showing lifetime restrictions and first 6 months food list" />
+            </div>
+          </div>
+        </section>
+
+        <!-- Disclaimer -->
+        <section class="mb-12">
+          <div class="bg-white rounded-tp-md border border-tp-border/50 shadow-tp p-6">
+            <div class="flex gap-3">
+              <svg class="w-5 h-5 text-tp-orange flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M12 9v2m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+              <div>
+                <p class="font-medium text-tp-text mb-1">Please check with your transplant team</p>
+                <p class="text-tp-muted leading-relaxed text-sm">
+                  The food restrictions listed here are common for liver transplant patients, but every person's situation is different. Always double-check against the guidance your own transplant team has provided. If you're unsure about anything, ask your team — they know your care best.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="border-t border-tp-border mb-12"></div>
+
+        <!-- Two types -->
+        <section class="mb-12">
+          <h2 class="font-serif text-2xl md:text-3xl font-semibold text-tp-text mb-4">Two types of restrictions</h2>
+
+          <div class="space-y-6">
+            <!-- Lifetime -->
+            <div class="bg-white rounded-tp-md border border-tp-border/50 shadow-tp p-6">
+              <h3 class="font-serif text-lg font-semibold text-tp-text mb-3">Lifetime restrictions</h3>
+              <p class="text-tp-muted leading-relaxed mb-3">
+                These are foods and drinks to avoid permanently after your transplant. They include things like:
+              </p>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-tp-muted">
+                {[
+                  'Grapefruit and grapefruit juice',
+                  'Seville oranges and pomelo',
+                  'Star fruit',
+                  'Alcohol',
+                  'Raw or undercooked shellfish',
+                  'Unpasteurised dairy',
+                  'St John\'s Wort',
+                  'Herbal supplements (without medical advice)',
+                ].map(item => (
+                  <span class="flex gap-2 items-start">
+                    <svg class="w-3.5 h-3.5 text-tp-coral flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+                    {item}
+                  </span>
+                ))}
+              </div>
+              <p class="text-tp-muted text-xs mt-3">This is not the full list — see the app for the complete guide.</p>
+            </div>
+
+            <!-- Temporary -->
+            <div class="bg-white rounded-tp-md border border-tp-border/50 shadow-tp p-6">
+              <h3 class="font-serif text-lg font-semibold text-tp-text mb-3">Temporary restrictions (first 6 months)</h3>
+              <p class="text-tp-muted leading-relaxed mb-3">
+                In the first six months after your transplant, you'll also need to avoid some extra foods while your immune system is at its most suppressed. These include things like:
+              </p>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-tp-muted">
+                {[
+                  'Raw or undercooked eggs and meat',
+                  'Sushi and smoked salmon',
+                  'Cured and deli counter meats',
+                  'Soft cheeses',
+                  'Buffet food',
+                  'Unwashed fruit and veg',
+                ].map(item => (
+                  <span class="flex gap-2 items-start">
+                    <svg class="w-3.5 h-3.5 text-tp-orange flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                    {item}
+                  </span>
+                ))}
+              </div>
+              <p class="text-tp-muted text-sm mt-3">
+                If you've entered your transplant date in Settings, the app will automatically show or hide these temporary restrictions based on how long ago your transplant was.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <div class="border-t border-tp-border mb-12"></div>
+
+        <!-- Waiter Mode -->
+        <section class="mb-12">
+          <h2 class="font-serif text-2xl md:text-3xl font-semibold text-tp-text mb-4">Waiter Mode</h2>
+          <p class="text-tp-muted leading-relaxed mb-4">
+            Eating out can feel tricky when you need to avoid certain foods. Waiter Mode makes it easy to show restaurant staff what you can't eat.
+          </p>
+
+          <h3 class="font-serif text-lg font-semibold text-tp-text mt-6 mb-3">How to use it</h3>
+          <ol class="space-y-3 text-tp-muted leading-relaxed">
+            <li class="flex gap-3">
+              <span class="flex-shrink-0 w-7 h-7 rounded-full bg-tp-green-light text-tp-green font-semibold text-sm flex items-center justify-center">1</span>
+              <span>Open the <strong class="text-tp-text">Food Safety</strong> section from your Profile</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="flex-shrink-0 w-7 h-7 rounded-full bg-tp-green-light text-tp-green font-semibold text-sm flex items-center justify-center">2</span>
+              <span>Tap <strong class="text-tp-text">Show to waiter</strong></span>
+            </li>
+            <li class="flex gap-3">
+              <span class="flex-shrink-0 w-7 h-7 rounded-full bg-tp-green-light text-tp-green font-semibold text-sm flex items-center justify-center">3</span>
+              <span>Your phone will show a clear, full-screen list of foods to avoid — just hand your phone to your waiter or server</span>
+            </li>
+          </ol>
+          <p class="text-tp-muted leading-relaxed mt-4 text-sm">
+            The text is large and clear so it's easy for someone to read quickly. It only shows the restrictions that apply to you right now.
+          </p>
+        </section>
+
+        <!-- Note -->
+        <section>
+          <div class="bg-tp-green-light rounded-tp-md p-6">
+            <h3 class="font-serif text-lg font-semibold text-tp-text mb-2">A note about the food guide</h3>
+            <p class="text-tp-muted leading-relaxed text-sm">
+              The food safety information in Transplant Log is based on general guidance for liver transplant recipients. Your transplant team may have specific advice that's different. Always follow the guidance your own team has given you.
+            </p>
+          </div>
+        </section>
+
+      </div>
+    </article>
+
+    <!-- Read next -->
+    <section class="pb-16 md:pb-24">
+      <div class="max-w-3xl mx-auto px-6">
+        <h2 class="font-serif text-xl font-semibold text-tp-text mb-6">Read next</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <a href={`${BASE}help/clinic-appointments/`} class="group bg-white rounded-tp-md border border-tp-border/50 shadow-tp p-5 hover:shadow-md hover:-translate-y-0.5 transition-all">
+            <h3 class="font-medium text-tp-text group-hover:text-tp-green transition-colors text-sm">Clinic Appointments</h3>
+            <p class="text-tp-muted text-xs mt-1">Prepare for visits and take notes</p>
+          </a>
+          <a href={`${BASE}help/getting-started/`} class="group bg-white rounded-tp-md border border-tp-border/50 shadow-tp p-5 hover:shadow-md hover:-translate-y-0.5 transition-all">
+            <h3 class="font-medium text-tp-text group-hover:text-tp-green transition-colors text-sm">Getting Started</h3>
+            <p class="text-tp-muted text-xs mt-1">Set up the app and find your way around</p>
+          </a>
+          <a href={`${BASE}help/your-data/`} class="group bg-white rounded-tp-md border border-tp-border/50 shadow-tp p-5 hover:shadow-md hover:-translate-y-0.5 transition-all">
+            <h3 class="font-medium text-tp-text group-hover:text-tp-green transition-colors text-sm">Your Data & Privacy</h3>
+            <p class="text-tp-muted text-xs mt-1">How your data is stored and backed up</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <BottomCTA />
+  </main>
+  <Footer />
+</BaseLayout>

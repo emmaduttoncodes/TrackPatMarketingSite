@@ -1,0 +1,220 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import BottomCTA from '../../components/BottomCTA.astro';
+import PageHeader from '../../components/PageHeader.astro';
+import { BASE } from '../../config';
+---
+
+<BaseLayout
+  title="Your Data & Privacy — Help Centre — Transplant Log"
+  description="How your data is stored in Transplant Log, how to back it up, and what happens if you get a new phone. Your privacy explained simply."
+>
+  <Navbar />
+  <main>
+    <PageHeader
+      title="Your Data & Privacy"
+      subtitle="Your information stays on your device. Here's how it all works."
+    />
+
+    <article class="py-16 md:py-24">
+      <div class="max-w-3xl mx-auto px-6">
+
+        <!-- Breadcrumb -->
+        <nav class="mb-12 text-sm text-tp-muted" aria-label="Breadcrumb">
+          <a href={`${BASE}help/`} class="text-tp-green hover:underline">Help Centre</a>
+          <span class="mx-2">/</span>
+          <span>Your Data & Privacy</span>
+        </nav>
+
+        <!-- Where data is stored -->
+        <section class="mb-12">
+          <h2 class="font-serif text-2xl md:text-3xl font-semibold text-tp-text mb-4">Where your data is stored</h2>
+          <p class="text-tp-muted leading-relaxed mb-4">
+            Everything you enter into Transplant Log is stored <strong class="text-tp-text">on your device only</strong>. Your health information never leaves your phone or computer. It is not sent to any server, cloud service, or third party.
+          </p>
+          <p class="text-tp-muted leading-relaxed">
+            This means your data is as private as it can be. The only way someone can see it is by using your device.
+          </p>
+        </section>
+
+        <div class="border-t border-tp-border mb-12"></div>
+
+        <!-- No account -->
+        <section class="mb-12">
+          <h2 class="font-serif text-2xl md:text-3xl font-semibold text-tp-text mb-4">No account needed</h2>
+          <p class="text-tp-muted leading-relaxed">
+            Transplant Log doesn't require you to create an account, sign in, or enter any personal details like an email address. You just open it and start using it. There are no passwords to remember.
+          </p>
+        </section>
+
+        <div class="border-t border-tp-border mb-12"></div>
+
+        <!-- Works offline -->
+        <section class="mb-12">
+          <h2 class="font-serif text-2xl md:text-3xl font-semibold text-tp-text mb-4">Works without internet</h2>
+          <p class="text-tp-muted leading-relaxed mb-4">
+            After the first time you open Transplant Log, it works even when you don't have an internet connection. You can log your health data, check your medications, and use the food safety guide — all without being online.
+          </p>
+          <p class="text-tp-muted leading-relaxed text-sm">
+            This is especially helpful if you're somewhere with poor signal, like in a hospital appointment or when travelling.
+          </p>
+        </section>
+
+        <div class="border-t border-tp-border mb-12"></div>
+
+        <!-- Backing up -->
+        <section class="mb-12">
+          <h2 class="font-serif text-2xl md:text-3xl font-semibold text-tp-text mb-4">Backing up your data</h2>
+          <p class="text-tp-muted leading-relaxed mb-4">
+            Because your data lives only on your device, it's a good idea to save a backup from time to time. A backup is a file that contains all your Transplant Log data.
+          </p>
+
+          <h3 class="font-serif text-lg font-semibold text-tp-text mt-8 mb-3">How to create a backup</h3>
+          <ol class="space-y-3 text-tp-muted leading-relaxed">
+            <li class="flex gap-3">
+              <span class="flex-shrink-0 w-7 h-7 rounded-full bg-tp-green-light text-tp-green font-semibold text-sm flex items-center justify-center">1</span>
+              <span>Go to the <strong class="text-tp-text">Profile</strong> tab</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="flex-shrink-0 w-7 h-7 rounded-full bg-tp-green-light text-tp-green font-semibold text-sm flex items-center justify-center">2</span>
+              <span>Tap the <strong class="text-tp-text">Settings</strong> icon (the small cog at the top)</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="flex-shrink-0 w-7 h-7 rounded-full bg-tp-green-light text-tp-green font-semibold text-sm flex items-center justify-center">3</span>
+              <span>Tap <strong class="text-tp-text">Backup data</strong></span>
+            </li>
+            <li class="flex gap-3">
+              <span class="flex-shrink-0 w-7 h-7 rounded-full bg-tp-green-light text-tp-green font-semibold text-sm flex items-center justify-center">4</span>
+              <span>A file will be downloaded to your device. Keep it somewhere safe — like in your phone's files app, or email it to yourself.</span>
+            </li>
+          </ol>
+
+          <div class="bg-tp-green-light rounded-tp-md p-5 mt-6">
+            <p class="text-tp-muted text-sm leading-relaxed">
+              <strong class="text-tp-text">When should I back up?</strong> It's a good habit to create a backup every week or two, or before you do anything that might affect your phone — like updating your phone software, clearing browser data, or getting a new device.
+            </p>
+          </div>
+        </section>
+
+        <div class="border-t border-tp-border mb-12"></div>
+
+        <!-- Restoring -->
+        <section class="mb-12">
+          <h2 class="font-serif text-2xl md:text-3xl font-semibold text-tp-text mb-4">Restoring from a backup</h2>
+          <p class="text-tp-muted leading-relaxed mb-4">
+            If you need to load a backup — for example, on a new phone — here's how:
+          </p>
+          <ol class="space-y-3 text-tp-muted leading-relaxed">
+            <li class="flex gap-3">
+              <span class="flex-shrink-0 w-7 h-7 rounded-full bg-tp-green-light text-tp-green font-semibold text-sm flex items-center justify-center">1</span>
+              <span>Open Transplant Log on the new device</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="flex-shrink-0 w-7 h-7 rounded-full bg-tp-green-light text-tp-green font-semibold text-sm flex items-center justify-center">2</span>
+              <span>Go to <strong class="text-tp-text">Profile</strong> &rarr; <strong class="text-tp-text">Settings</strong></span>
+            </li>
+            <li class="flex gap-3">
+              <span class="flex-shrink-0 w-7 h-7 rounded-full bg-tp-green-light text-tp-green font-semibold text-sm flex items-center justify-center">3</span>
+              <span>Tap <strong class="text-tp-text">Restore from backup</strong></span>
+            </li>
+            <li class="flex gap-3">
+              <span class="flex-shrink-0 w-7 h-7 rounded-full bg-tp-green-light text-tp-green font-semibold text-sm flex items-center justify-center">4</span>
+              <span>Choose the backup file you saved earlier</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="flex-shrink-0 w-7 h-7 rounded-full bg-tp-green-light text-tp-green font-semibold text-sm flex items-center justify-center">5</span>
+              <span>Confirm that you'd like to restore — and your data will be loaded</span>
+            </li>
+          </ol>
+          <p class="text-tp-muted leading-relaxed mt-4 text-sm">
+            Restoring a backup will replace any data already in the app on that device.
+          </p>
+        </section>
+
+        <div class="border-t border-tp-border mb-12"></div>
+
+        <!-- New phone -->
+        <section class="mb-12">
+          <h2 class="font-serif text-2xl md:text-3xl font-semibold text-tp-text mb-4">What if I get a new phone?</h2>
+          <p class="text-tp-muted leading-relaxed mb-4">
+            Because your data is stored on your device, it won't automatically move to a new phone. But don't worry — as long as you've saved a backup, you can load it onto your new phone and pick up right where you left off.
+          </p>
+          <p class="text-tp-muted leading-relaxed">
+            The steps are: save a backup on your old phone, open Transplant Log on the new phone, and restore from the backup file. That's it.
+          </p>
+        </section>
+
+        <div class="border-t border-tp-border mb-12"></div>
+
+        <!-- Can anyone see -->
+        <section class="mb-12">
+          <h2 class="font-serif text-2xl md:text-3xl font-semibold text-tp-text mb-4">Can anyone else see my data?</h2>
+          <p class="text-tp-muted leading-relaxed mb-4">
+            No. Your data is only visible on your device. No one else can see it — not us, not your medical team, and not anyone else — unless you choose to share it yourself.
+          </p>
+          <p class="text-tp-muted leading-relaxed">
+            The only way to share your data is by creating a report and sending it yourself, for example by printing it or emailing it to your team.
+          </p>
+        </section>
+
+        <!-- What could cause data loss -->
+        <section>
+          <div class="bg-white rounded-tp-md border border-tp-border/50 shadow-tp p-6">
+            <h3 class="font-serif text-lg font-semibold text-tp-text mb-3">Things that could affect your data</h3>
+            <p class="text-tp-muted leading-relaxed text-sm mb-3">
+              Because your data lives on your device, there are a few situations where it could be lost:
+            </p>
+            <ul class="space-y-2 text-tp-muted text-sm">
+              <li class="flex gap-2">
+                <svg class="w-4 h-4 text-tp-orange flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                <span>Clearing your browser data or history</span>
+              </li>
+              <li class="flex gap-2">
+                <svg class="w-4 h-4 text-tp-orange flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                <span>Uninstalling or removing the app from your home screen</span>
+              </li>
+              <li class="flex gap-2">
+                <svg class="w-4 h-4 text-tp-orange flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                <span>Resetting your phone to factory settings</span>
+              </li>
+              <li class="flex gap-2">
+                <svg class="w-4 h-4 text-tp-orange flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                <span>Losing or damaging your phone</span>
+              </li>
+            </ul>
+            <p class="text-tp-muted text-sm mt-3">
+              This is why regular backups are so important. We can't recover your data if it's lost, because we never have a copy of it.
+            </p>
+          </div>
+        </section>
+
+      </div>
+    </article>
+
+    <!-- Read next -->
+    <section class="pb-16 md:pb-24">
+      <div class="max-w-3xl mx-auto px-6">
+        <h2 class="font-serif text-xl font-semibold text-tp-text mb-6">Read next</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <a href={`${BASE}help/getting-started/`} class="group bg-white rounded-tp-md border border-tp-border/50 shadow-tp p-5 hover:shadow-md hover:-translate-y-0.5 transition-all">
+            <h3 class="font-medium text-tp-text group-hover:text-tp-green transition-colors text-sm">Getting Started</h3>
+            <p class="text-tp-muted text-xs mt-1">Set up the app and find your way around</p>
+          </a>
+          <a href={`${BASE}help/trends-and-reports/`} class="group bg-white rounded-tp-md border border-tp-border/50 shadow-tp p-5 hover:shadow-md hover:-translate-y-0.5 transition-all">
+            <h3 class="font-medium text-tp-text group-hover:text-tp-green transition-colors text-sm">Trends & Reports</h3>
+            <p class="text-tp-muted text-xs mt-1">See your recovery trends and share reports</p>
+          </a>
+          <a href={`${BASE}help/medications/`} class="group bg-white rounded-tp-md border border-tp-border/50 shadow-tp p-5 hover:shadow-md hover:-translate-y-0.5 transition-all">
+            <h3 class="font-medium text-tp-text group-hover:text-tp-green transition-colors text-sm">Medications</h3>
+            <p class="text-tp-muted text-xs mt-1">Track your scheduled and as-needed medicines</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <BottomCTA />
+  </main>
+  <Footer />
+</BaseLayout>
