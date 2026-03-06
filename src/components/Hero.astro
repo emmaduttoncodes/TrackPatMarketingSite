@@ -14,7 +14,7 @@ import { APP_URL, BASE } from '../config';
         <h1 class="font-serif text-4xl md:text-5xl lg:text-[3.5rem] font-bold text-white leading-tight mb-6">
           A calm companion for recovery after transplant
         </h1>
-        <p class="text-white/85 text-lg md:text-xl leading-relaxed mb-8 max-w-lg mx-auto md:mx-0">
+        <p class="text-white/90 text-lg md:text-xl leading-relaxed mb-8 max-w-lg mx-auto md:mx-0">
           Track vitals, medications, symptoms, and more — all privately on your device.
           No account needed. Works offline.
         </p>
@@ -42,12 +42,26 @@ import { APP_URL, BASE } from '../config';
         </div>
       </div>
 
-      <!-- Phone mockup -->
-      <div class="flex-1 flex justify-center">
+      <!-- Phone mockups -->
+      <div class="flex-1 flex justify-center items-end gap-4 hero-mockups">
         <PhoneMockup label="Overview dashboard screenshot (390x844)" screenshotSrc={`${BASE}screenshots/dashboard.png`} screenshotAlt="Transplant Log app dashboard showing daily vitals, mood, sleep, pain, and activity tiles" />
+        <div class="hidden xl:block -mb-8">
+          <PhoneMockup label="Medication tracking screenshot (390x844)" screenshotSrc={`${BASE}screenshots/medication.png`} screenshotAlt="Transplant Log medication tab showing scheduled medications grouped by time of day" />
+        </div>
       </div>
     </div>
   </div>
+
+  <style>
+    .hero-mockups > :global(div) {
+      width: 200px;
+    }
+    @media (min-width: 768px) {
+      .hero-mockups > :global(div) {
+        width: 220px;
+      }
+    }
+  </style>
 
   <!-- Bottom wave -->
   <div class="absolute bottom-0 left-0 right-0">

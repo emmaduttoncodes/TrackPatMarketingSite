@@ -5,16 +5,18 @@ import Hero from '../components/Hero.astro';
 import TrustStrip from '../components/TrustStrip.astro';
 import FeaturesGrid from '../components/FeaturesGrid.astro';
 import HowItWorks from '../components/HowItWorks.astro';
+import BuiltBySection from '../components/BuiltBySection.astro';
 import BottomCTA from '../components/BottomCTA.astro';
 import Footer from '../components/Footer.astro';
 ---
 
 <BaseLayout title="Transplant Log — A calm companion for recovery after transplant">
   <Navbar />
-  <main>
+  <main id="main-content">
     <Hero />
     <TrustStrip />
     <FeaturesGrid />
+    <BuiltBySection />
     <HowItWorks />
     <BottomCTA />
   </main>

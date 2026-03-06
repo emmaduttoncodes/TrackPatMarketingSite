@@ -20,6 +20,16 @@
     font-family: theme('fontFamily.serif');
   }
 
+  /* Focus indicators for keyboard navigation */
+  a:focus-visible,
+  button:focus-visible,
+  summary:focus-visible,
+  [role="button"]:focus-visible {
+    outline: 2px solid theme('colors.tp-green');
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
   /* FAQ accordion */
   details summary {
     cursor: pointer;
@@ -56,4 +66,10 @@
 
 .bg-tp-gradient {
   background: linear-gradient(135deg, #8fae8b 0%, #a3c4a0 40%, #90c5b0 100%);
+}
+
+.bg-tp-gradient h1,
+.bg-tp-gradient h2,
+.bg-tp-gradient p {
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
 }

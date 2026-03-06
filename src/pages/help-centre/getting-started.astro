@@ -13,7 +13,7 @@ import { BASE } from '../../config';
   description="How to open Transplant Log, add it to your home screen, and set things up for the first time. Simple step-by-step guide."
 >
   <Navbar />
-  <main>
+  <main id="main-content">
     <PageHeader
       title="Getting Started"
       subtitle="Everything you need to get up and running. It only takes a minute."
@@ -180,16 +180,6 @@ import { BASE } from '../../config';
             <div class="flex-shrink-0 mx-auto md:mx-0">
               <PhoneMockup label="Dashboard overview" screenshotSrc={`${BASE}screenshots/dashboard.png`} screenshotAlt="The Transplant Log dashboard showing daily logging tiles" />
             </div>
-          </div>
-        </section>
-
-        <!-- Nudges -->
-        <section class="mb-12">
-          <div class="bg-tp-green-light rounded-tp-md p-6">
-            <h3 class="font-serif text-lg font-semibold text-tp-text mb-2">Helpful hints</h3>
-            <p class="text-tp-muted leading-relaxed text-sm">
-              When you first start using the app, you'll see a few small purple cards with tips to help you find your way around. You can dismiss each one by tapping "Got it" — they won't come back once you've seen them.
-            </p>
           </div>
         </section>
 
